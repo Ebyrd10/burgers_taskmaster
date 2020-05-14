@@ -1,3 +1,5 @@
+const connection = require ("../config/connection.js")
+
 //create a databaseManipulate object with these functions
 // `selectAll()`
 //  `insertOne()`

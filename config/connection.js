@@ -1,21 +1,14 @@
-
+const mysql = require(`mysql`);
 //Creating a connection with the database
+const PORT = process.env.PORT || 8080;
 const connection = mysql.createConnection({
   host: "localhost",
-  port: 3306,
+  // port: 3306,
+  port: PORT,
   user: "root",
-  password: "",
+  password: "NewPassword",
   database: "burgers_db"
 });
-connection.connect(function(err) {
-    if (err) {
-      console.error("error connecting: " + err.stack);
-      return;
-    }
-  
-    console.log("connected as id " + connection.threadId);
-  });
 
-
-  //Exports the connection
+  //Exports the connection settings
   module.exports.connection = connection;

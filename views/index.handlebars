@@ -1,0 +1,40 @@
+{{!-- Larger Header --}}
+<h1>Burgers</h1>
+
+
+{{!-- First Section --}}
+<h3>Burgers to Eat</h3>
+<ul>
+  {{#each burgers}}
+  <li>
+    {{#if eaten}}
+    {{else}}
+    <p>ID: {{this.id}}</p>
+    <p>Burger: {{this.burger}}</p>
+    {{/if}}
+  </li>
+  {{/each}}
+</ul>
+
+{{!-- Second Section --}}
+<h3>Burgers already Eaten</h3>
+<ul>
+  {{#each burgers}}
+  <li>
+    {{#if eaten}}
+    <p>ID: {{this.id}}</p>
+    <p>Burger: {{this.burger}}</p>
+    {{/if}}
+  </li>
+  {{/each}}
+</ul>
+
+
+{{!-- Form Area for POST --}}
+<div>
+  <form action="/" method="POST">
+    <textarea type="text" name="wish"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
