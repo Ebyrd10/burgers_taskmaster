@@ -33,8 +33,19 @@
 {{!-- Form Area for POST --}}
 <div>
   <form action="/" method="POST">
-    <textarea type="text" name="wish"></textarea>
+    <textarea type="text" name="burger"></textarea>
 
     <button type="submit">Submit</button>
   </form>
 </div>
+
+<script>
+  document.querySelector("button").addEventListener("CLICK", function(event){
+    const burgerInfo = this.burger.val();
+    $.ajax({
+      url: "/",
+      method: "POST"
+      data: burgerInfo
+    }).done(window.location.assign("/"))
+  });
+</script>
