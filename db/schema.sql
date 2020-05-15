@@ -4,9 +4,7 @@ USE burgers_db;
 
 CREATE TABLE burgers (
     id int NOT NULL AUTO_INCREMENT,
-    burger varchar(25) NOT NULL,
+    burger varchar(255) NOT NULL,
     eaten BOOLEAN DEFAULT FALSE,
     PRIMARY KEY (id)
 );
-
-

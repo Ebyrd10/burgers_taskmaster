@@ -1,0 +1,25 @@
+{
+  "name": "burgers_taskmaster",
+  "version": "1.0.0",
+  "description": "A full stack web application centering around a task list of burgers to eat",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ebyrd10/burgers_taskmaster.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ebyrd10/burgers_taskmaster/issues"
+  },
+  "homepage": "https://github.com/Ebyrd10/burgers_taskmaster#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mysql": "^2.18.1"
+  }
+}

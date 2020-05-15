@@ -1,51 +1,58 @@
+<div class="container">
 {{!-- Larger Header --}}
 <h1>Burgers</h1>
 
 
+<div id= "burgerContainer" class="row">
 {{!-- First Section --}}
+<div class = "burger1 col-md-4">
 <h3>Burgers to Eat</h3>
-<ul>
+<ul class="burgerUL">
   {{#each burgers}}
-  <li>
-    {{#if eaten}}
+  {{#if eaten}}
     {{else}}
-    <p>ID: {{this.id}}</p>
-    <p>Burger: {{this.burger}}</p>
-    {{/if}}
+  <li>
+    {{!-- <p class="burgerLi" id="{{this.id}}pid">ID: {{this.id}}</p> --}}
+    <p class="burgerLi" id="{{this.id}}pburger"> Burger: {{this.burger}}  
+      <form method="POST" action= "/EAT/{{this.id}}" class="inline"><button type="submit" name="paramName" value="paramValue">Eat</button></form>
+      <form method="POST" action= "/DELETE/{{this.id}}" class="inline"><button type="submit" name="paramName" value="paramValue">Delete</button></form>
+      </p>
   </li>
+  {{/if}}
   {{/each}}
 </ul>
+</div>
+
 
 {{!-- Second Section --}}
+<div class = "burger4 col-md">
 <h3>Burgers already Eaten</h3>
-<ul>
+<ul class="burgerUL">
   {{#each burgers}}
+  {{#if eaten}} 
   <li>
-    {{#if eaten}}
-    <p>ID: {{this.id}}</p>
-    <p>Burger: {{this.burger}}</p>
-    {{/if}}
+    {{!-- <p class="burgerLi" id="{{this.id}}pid">ID: {{this.id}}</p> --}}
+    <p class="burgerLi" id="{{this.id}}pburger"> Burger: {{this.burger}}  
+      <form method="POST" action= "/EAT/{{this.id}}" class="inline"><button type="submit" name="paramName" value="paramValue">Eat</button></form>
+      <form method="POST" action= "/DELETE/{{this.id}}" class="inline"><button type="submit" name="paramName" value="paramValue">Delete</button></form>
+      </p>
   </li>
+  {{/if}}
   {{/each}}
 </ul>
+</div>
+
 
 
 {{!-- Form Area for POST --}}
-<div>
+<div id="formContainer col-md offset-2">
   <form action="/" method="POST">
+  <h3> Add New Burger</h3>
     <textarea type="text" name="burger"></textarea>
-
     <button type="submit">Submit</button>
   </form>
 </div>
 
-<script>
-  document.querySelector("button").addEventListener("CLICK", function(event){
-    const burgerInfo = this.burger.val();
-    $.ajax({
-      url: "/",
-      method: "POST"
-      data: burgerInfo
-    }).done(window.location.assign("/"))
-  });
-</script>
+
+
+</div>

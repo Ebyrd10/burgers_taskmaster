@@ -19,6 +19,15 @@ app.post("/", function (req, res) {
     });
 });
 
+app.post("/DELETE/:id", function (req, res) {
+    console.log("got here")
+    connection.query("DELETE FROM burgers WHERE id = ?", [req.params.id], function (err, result) {
+        if (err) throw err;
+        res.redirect("/");
+    });
+});
+
+
 // Start the server
 app.listen(PORT, function () {
     console.log("Server listening on" + PORT);
