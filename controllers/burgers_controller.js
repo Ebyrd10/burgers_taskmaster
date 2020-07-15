@@ -1,37 +1,17 @@
-// import express and burger.js
-const express = require(`express`);
-const app = express();
+module.exports = {
+    listAll: async function(connection){
+        return connection.query("SELECT * FROM burgers;", function(err, data) {
+            if (err) {
+              throw err;
+            }
+            return data;
+        });
+    },
 
-//upon loading the landing page, all burgers are selected and rendered from the database
-app.get("/", function (req, res) {
-    connection.query("SELECT * FROM burgers;", function (err, data) {
-        if (err) throw err;
-        res.render("index", { burgers: data });
-    });
-
-})
-
-//if data is posted then it is added as a burger entry and then the page redirects to the start
-app.post("/", function (req, res) {
-    connection.query("INSERT INTO burgers (burger) VALUES (?)", [req.body.burger], function (err, result) {
-        if (err) throw err;
-        res.redirect("/");
-    });
-});
-
-app.post("/DELETE/:id", function (req, res) {
-    console.log("got here")
-    connection.query("DELETE FROM burgers WHERE id = ?", [req.params.id], function (err, result) {
-        if (err) throw err;
-        res.redirect("/");
-    });
-});
-
-
-// Start the server
-app.listen(PORT, function () {
-    console.log("Server listening on" + PORT);
-});
+    update: function(){
+        console.log("update")
+    }
+}
 
 //export router
 
