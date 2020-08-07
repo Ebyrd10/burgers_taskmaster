@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to burgers_taskmaster 👋</h1>
+<h1 align="center">Welcome to Burgers Taskmaster 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/Ebyrd10/burgers_taskmaster#readme" target="_blank">
@@ -8,7 +8,7 @@
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
   <a href="https://github.com/Ebyrd10/burgers_taskmaster/blob/master/LICENSE" target="_blank">
-    <img alt="License: MITT" src="https://img.shields.io/github/license/Ebyrd10/burgers_taskmaster" />
+    <img alt="License: MIT" src="https://img.shields.io/github/license/Ebyrd10/burgers_taskmaster" />
   </a>
 </p>
 
@@ -53,7 +53,7 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 Copyright © 2020 [Ethan Byrd](https://github.com/Ebyrd10).<br />
-This project is [MITT](https://github.com/Ebyrd10/burgers_taskmaster/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/Ebyrd10/burgers_taskmaster/blob/master/LICENSE) licensed.
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
